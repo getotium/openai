@@ -40,7 +40,7 @@ body := openai.NewList([]openai.FileObject{f1, f2})
 
 ## Provenance
 
-Extracted from [Otium](https://getotium.com), whose public API is OpenAI-compatible so customers
+Extracted from [Otium](https://getotium.ai), whose public API is OpenAI-compatible so customers
 integrate by pointing an existing OpenAI client at it. These are the shapes that make "just change
 the base URL" true; the reference server and conformance suite that exercise them are being published
 alongside.
