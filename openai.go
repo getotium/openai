@@ -1,8 +1,8 @@
 // Package openai holds Otium's OpenAI-compatible wire types: the JSON shapes for the
 // Files and Batch APIs that a base-URL-swapped OpenAI client expects to see. It is the
-// conformance layer for the public surface — the first customer (AR15.Build) integrates
-// by pointing its existing OpenAI client at Otium, so these shapes must match OpenAI's
-// exactly where the client depends on them.
+// conformance layer for the public surface — a customer integrates by pointing its existing
+// OpenAI client at Otium, so these shapes must match OpenAI's exactly where the client depends
+// on them.
 //
 // Like pkg/huggingface, this package is deliberately dependency-free and free of Otium
 // imports: it models the external contract only (objects + a JSONL codec for batch
@@ -42,8 +42,8 @@ const (
 )
 
 // EndpointChatCompletions is the only batch endpoint Otium supports today — the surface
-// AR15.Build's enrichment pipeline uses. OpenAI also allows /v1/embeddings and
-// /v1/completions; those are additive later.
+// batch chat workloads use. OpenAI also allows /v1/embeddings and /v1/completions; those are
+// additive later.
 const EndpointChatCompletions = "/v1/chat/completions"
 
 // CompletionWindow24h is the only completion window OpenAI's Batch API documents. Otium
